@@ -7,8 +7,9 @@ function TaskInput({ tarea, setTarea, agregarTarea }) {
   };
 
   return (
-    <div>
+    <div className="flex gap-2">
       <input
+        className="border p-2 rounded w-full"
         type="text"
         placeholder="Escribe una tarea"
         value={tarea}
@@ -16,7 +17,10 @@ function TaskInput({ tarea, setTarea, agregarTarea }) {
         onKeyDown={manejarTecla}
       />
 
-      <button onClick={agregarTarea}>
+      <button
+        className="bg-blue-500 text-white px-4 rounded"
+        onClick={agregarTarea}
+      >
         Agregar
       </button>
     </div>
